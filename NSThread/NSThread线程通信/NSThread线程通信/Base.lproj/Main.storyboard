@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s1V-nn-cAb">
+                                <rect key="frame" x="119" y="66" width="363" height="258"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="258" id="GQk-XR-ddy"/>
+                                    <constraint firstAttribute="width" constant="363" id="MaD-sW-Myv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlU-nt-xSy">
+                                <rect key="frame" x="119" y="411" width="363" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="开始下载图片"/>
+                                <connections>
+                                    <action selector="beginDownloadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="In2-en-XRy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vlU-nt-xSy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="3OY-Yp-axW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vlU-nt-xSy" secondAttribute="bottom" constant="159" id="8sx-ay-CAb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vlU-nt-xSy" secondAttribute="trailing" constant="98" id="CQz-Ey-0Bm"/>
+                            <constraint firstItem="s1V-nn-cAb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-105" id="CYO-Ri-0E8"/>
+                            <constraint firstItem="s1V-nn-cAb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lam-TT-nTR"/>
+                            <constraint firstItem="vlU-nt-xSy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="391" id="vqs-xT-EUb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iamgeView" destination="s1V-nn-cAb" id="Fth-2P-RrF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="315"/>
+        </scene>
+    </scenes>
+</document>

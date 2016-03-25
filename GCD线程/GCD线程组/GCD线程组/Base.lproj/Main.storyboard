@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IXn-wj-QzN">
+                                <rect key="frame" x="178" y="200" width="271" height="153"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apL-QG-ten">
+                                <rect key="frame" x="374" y="417" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Trc-76-GNn"/>
+                                    <constraint firstAttribute="height" constant="30" id="aX5-b3-4nA"/>
+                                </constraints>
+                                <state key="normal" title="线程组下载"/>
+                                <connections>
+                                    <action selector="threadGroupDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oea-Ae-hrV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqY-x0-lE2">
+                                <rect key="frame" x="178" y="417" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="1jq-Tp-nAW"/>
+                                    <constraint firstAttribute="height" constant="30" id="7jB-go-bEc"/>
+                                </constraints>
+                                <state key="normal" title="普通下载"/>
+                                <connections>
+                                    <action selector="nomalDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oe5-lx-qXJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TKW-w8-F9r">
+                                <rect key="frame" x="178" y="28" width="271" height="153"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="VzD-V5-edl"/>
+                                    <constraint firstAttribute="width" constant="271" id="W8x-8O-Cv7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TKW-w8-F9r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="13" id="5jB-pZ-RRH"/>
+                            <constraint firstItem="vqY-x0-lE2" firstAttribute="leading" secondItem="IXn-wj-QzN" secondAttribute="leading" id="Ggd-pU-rFm"/>
+                            <constraint firstItem="IXn-wj-QzN" firstAttribute="leading" secondItem="TKW-w8-F9r" secondAttribute="leading" id="RMB-4c-mme"/>
+                            <constraint firstItem="IXn-wj-QzN" firstAttribute="top" secondItem="TKW-w8-F9r" secondAttribute="bottom" constant="19" id="STC-cz-cj2"/>
+                            <constraint firstItem="apL-QG-ten" firstAttribute="top" secondItem="IXn-wj-QzN" secondAttribute="bottom" constant="64" id="U6Y-uF-cJ1"/>
+                            <constraint firstItem="apL-QG-ten" firstAttribute="trailing" secondItem="IXn-wj-QzN" secondAttribute="trailing" id="hEn-k1-GzR"/>
+                            <constraint firstItem="IXn-wj-QzN" firstAttribute="height" secondItem="TKW-w8-F9r" secondAttribute="height" id="krI-VB-yMo"/>
+                            <constraint firstItem="TKW-w8-F9r" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-196" id="ntK-BV-yPV"/>
+                            <constraint firstItem="vqY-x0-lE2" firstAttribute="top" secondItem="IXn-wj-QzN" secondAttribute="bottom" constant="64" id="ukx-fG-8LR"/>
+                            <constraint firstItem="IXn-wj-QzN" firstAttribute="width" secondItem="TKW-w8-F9r" secondAttribute="width" id="unA-Nc-io5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image1" destination="TKW-w8-F9r" id="9jd-ue-Jyi"/>
+                        <outlet property="image2" destination="IXn-wj-QzN" id="bEh-JE-ckm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="315"/>
+        </scene>
+    </scenes>
+</document>

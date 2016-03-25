@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoQ-An-DBG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="开启线程Test"/>
+                                <connections>
+                                    <action selector="dispatchThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KeA-l7-bTR"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FBf-2U-tFW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="Ijx-cC-HDJ"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ijx-cC-HDJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Ijx-cC-HDJ"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="FBf-2U-tFW" secondAttribute="trailing" constant="60" id="5dU-dJ-4OK"/>
+                            <constraint firstItem="FBf-2U-tFW" firstAttribute="top" secondItem="GoQ-An-DBG" secondAttribute="bottom" constant="101" id="U9P-OZ-lH3"/>
+                            <constraint firstItem="FBf-2U-tFW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="g8N-wC-Lln"/>
+                            <constraint firstItem="GoQ-An-DBG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sks-qL-elx"/>
+                            <constraint firstItem="GoQ-An-DBG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ySM-Gs-meh">
+                                <variation key="widthClass=compact" constant="-212"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GoQ-An-DBG"/>
+                                <exclude reference="FBf-2U-tFW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="sks-qL-elx"/>
+                                <exclude reference="ySM-Gs-meh"/>
+                                <exclude reference="5dU-dJ-4OK"/>
+                                <exclude reference="U9P-OZ-lH3"/>
+                                <exclude reference="g8N-wC-Lln"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="GoQ-An-DBG"/>
+                                <include reference="FBf-2U-tFW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="sks-qL-elx"/>
+                                <include reference="ySM-Gs-meh"/>
+                                <include reference="5dU-dJ-4OK"/>
+                                <include reference="U9P-OZ-lH3"/>
+                                <include reference="g8N-wC-Lln"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279" y="314"/>
+        </scene>
+    </scenes>
+</document>
